@@ -1,0 +1,57 @@
+\section{Bold, italics and underlining}
+
+Next, we will now look at some text formatting commands:
+
+\begin{itemize}
+    \item \textbf{Bold}: bold text in LaTeX is typeset using the \verb|\textbf{...}| command.
+    \item \textit{Italics}: italicised text is produced using the \verb|\textit{...}| command.
+    \item \underline{Underline}: to underline text use the \verb|\underline{...}| command.
+\end{itemize}
+
+The next example demonstrates these commands:
+
+\begin{tcolorbox}
+\begin{verbatim}
+    Some of the \textbf{greatest}
+    discoveries in \underline{science} 
+    were made by \textbf{\textit{accident}}.
+\end{verbatim}
+\end{tcolorbox}
+
+This example produces the following output:
+
+\begin{mdframed}
+\-\hspace{20pt}Some of the \textbf{greatest} discoveries in \underline{science} were made by \textbf{\textit{accident}}.
+\end{mdframed}
+
+Another very useful command is \verb|\emph{|\emph{argument}\verb|}|, whose effect on its \emph{argument} depends on the context. Inside normal text, the emphasized text is italicized, but this behaviour is reversed if used inside an italicized text—see the next example:
+
+\begin{tcolorbox}
+\begin{verbatim}
+    Some of the greatest \emph{discoveries} in science were made 
+    by accident.
+
+    \textit{Some of the greatest \emph{discoveries} in science were 
+    made by accident.}
+
+    \textbf{Some of the greatest \emph{discoveries} in science were 
+    made by accident.}
+\end{verbatim}
+\end{tcolorbox}
+
+This example produces the following output:
+
+\begin{mdframed}
+    Some of the greatest \emph{discoveries} in science 
+    were made by accident.
+
+    \textit{Some of the greatest \emph{discoveries} 
+    in science were made by accident.}
+
+    \textbf{Some of the greatest \emph{discoveries} 
+    in science were made by accident.}
+\end{mdframed}
+
+\begin{itemize}
+    \item \textbf{Note:} some packages, such as Beamer, change the behaviour of the \verb|\emph| command.
+\end{itemize}

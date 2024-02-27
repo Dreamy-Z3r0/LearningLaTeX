@@ -1,0 +1,61 @@
+\section{Creating lists in \LaTeX}
+
+You can create different types of list using \emph{environments}, which are used to encapsulate the \LaTeX\ code required to implement a specific typesetting feature. An environment starts with \verb|\begin{|\emph{environment-name}\verb|}| and ends with \verb|\end{|\emph{environment-name}\verb|}| where \emph{environment-name} might be \verb|figure|, \verb|tabular| or one of the list types: \verb|itemize| for unordered lists or \verb|enumerate| for ordered lists.
+
+\subsection{Unordered lists}
+
+Unordered lists are produced by the \verb|itemize| environment. Each list entry must be preceded by the \verb|\item| command, as shown below:
+
+\begin{tcolorbox}
+\begin{verbatim}
+    \documentclass{article}
+    \begin{document}
+    \begin{itemize}
+    \item The individual entries are indicated with a black dot, 
+    a so-called bullet.
+    \item The text in the entries may be of any length.
+    \end{itemize}
+    \end{document}
+\end{verbatim}
+\end{tcolorbox}
+
+This example produces the following output:
+
+\begin{mdframed}
+    \begin{itemize}
+    \item The individual entries are indicated with a black dot, 
+    a so-called bullet.
+    \item The text in the entries may be of any length.
+    \end{itemize}
+\end{mdframed}
+
+You can also open this \href{https://www.overleaf.com/project/new/template/25521?id=107987258&templateName=Demonstrating+various+types+of+LaTeX+list&latexEngine=pdflatex&texImage=texlive-full%3A2022.1&mainFile=}{larger Overleaf project} which demonstrates various types of \LaTeX\ list.
+
+\subsection{Ordered lists}
+
+Ordered lists use the same syntax as unordered lists but are created using the \verb|enumerate| environment:
+
+\begin{tcolorbox}
+\begin{verbatim}
+    \documentclass{article}
+    \begin{document}
+    \begin{enumerate}
+    \item This is the first entry in our list.
+    \item The list numbers increase with each entry we add.
+    \end{enumerate}
+    \end{document}
+\end{verbatim}
+\end{tcolorbox}
+
+This example produces the following output:
+
+\begin{mdframed}
+    \begin{enumerate}
+        \item This is the first entry in our list.
+        \item The list numbers increase with each entry we add.
+    \end{enumerate}
+\end{mdframed}
+
+As with unordered lists, each entry must be preceded by the \verb|\item| command which, here, automatically generates the numeric ordered-list label value, starting at 1.
+
+For further information you can open this \href{https://www.overleaf.com/project/new/template/25521?id=107987258&templateName=Demonstrating+various+types+of+LaTeX+list&latexEngine=pdflatex&texImage=texlive-full%3A2022.1&mainFile=}{larger Overleaf project} which demonstrates various types of \LaTeX\ list or visit our dedicated \href{https://www.overleaf.com/learn/latex/Lists}{help article on \LaTeX\ lists}, which provides many more examples and shows how to create customized lists.

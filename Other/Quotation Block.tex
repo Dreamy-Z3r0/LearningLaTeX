@@ -1,0 +1,23 @@
+% Source: https://tex.stackexchange.com/questions/16964/block-quote-with-big-quotation-marks
+
+\usepackage{xcolor}
+\usepackage{ragged2e}
+
+\newcommand{\quotebox}[1]{
+    \begin{center}
+        \fcolorbox{white}{blue!15!gray!15}{
+            \begin{minipage}{0.9\linewidth}
+                \vspace{10pt}
+                \center
+                \begin{minipage}{0.8\linewidth}
+                    {\space\Huge``}
+                    \begin{Center}
+                        {#1}
+                    \end{Center}
+                    {\hspace{1.5em}\break\null\Huge\hfill''}
+                \end{minipage}
+                \smallbreak
+            \end{minipage}
+        }
+    \end{center}
+}

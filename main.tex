@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+
+\input{External Packages}
+\input{Document Setup}
+
+\input{Other/Quotation Block}
+
+\begin{document}
+
+% Title page
+\input{Contents/Title page}
+
+% Page numbering for non-content sections
+\pagenumbering{roman}
+
+% Preface page
+\input{Contents/Foreword}
+
+% Table of contents
+\newpage
+\input{Contents/Table of contents}
+
+% Save page count of non-content sections
+\clearpage
+\newcount\savedPageCount
+\savedPageCount = \arabic{page}
+
+% Chapter 1: What is LaTeX?
+\newpage
+\pagenumbering{arabic}      % Start number pages of contents
+\input{Contents/Chapters/Chapter 1}
+
+% Chapter 2: Why learn LaTeX?
+\input{Contents/Chapters/Chapter 2}
+
+% Chapter 3: Writing your first piece of LaTeX
+\input{Contents/Chapters/Chapter 3}
+
+% Chapter 4: The preamble of a document
+\input{Contents/Chapters/Chapter 4}
+
+% Chapter 5: Including title, author and date information
+\input{Contents/Chapters/Chapter 5}
+
+% Chapter 6: Adding comments
+\newpage
+\input{Contents/Chapters/Chapter 6}
+
+% Chapter 7: Bold, italics and underlining
+\input{Contents/Chapters/Chapter 7}
+
+% Chapter 8: Adding images
+\input{Contents/Chapters/Chapter 8}
+
+% Chapter 9: Captions, labels and references
+\input{Contents/Chapters/Chapter 9}
+
+% Chapter 10: Creating lists in LaTeX
+\input{Contents/Chapters/Chapter 10}
+
+% Chapter 11: Adding math to LaTeX
+\input{Contents/Chapters/Chapter 11}
+
+% Chapter 12: Basic document structure
+\input{Contents/Chapters/Chapter 12}
+
+% Chapter 13: Creating tables
+\input{Contents/Chapters/Chapter 13}
+
+% Chapter 14: Adding a Table of Contents
+\input{Contents/Chapters/Chapter 14}
+
+% Chapter 15: Downloading your finished document
+\input{Contents/Chapters/Chapter 15}
+
+% Chapter 16: Finding and using LaTeX packages
+\input{Contents/Chapters/Chapter 16}
+
+% Return to non-content section(s)
+\newpage
+\pagenumbering{roman}
+\setcounter{page}{\numexpr\savedPageCount}
+
+% References
+\input{Contents/References}
+
+% Start of appendixes
+\appendix
+
+% Appendix: List of packages
+\newpage
+\input{Contents/Appendixes/List of packages}
+
+% Appendix: Project structure
+\newpage
+\input{Contents/Appendixes/Project structure}
+
+\end{document}

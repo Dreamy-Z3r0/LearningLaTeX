@@ -1,0 +1,24 @@
+\section{Adding comments}
+
+LaTeX is a form of “program code”, but one which specializes in document typesetting; consequently, as with code written in any other programming language, it can be very useful to include comments within your document. A \LaTeX\ comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging.
+
+To make a comment in \LaTeX, simply write a \verb|%| symbol at the beginning of the line, as shown in the following code which uses the example above:
+
+\begin{tcolorbox}
+\begin{verbatim}
+    \documentclass[12pt, letterpaper]{article}
+    \title{My first LaTeX document}
+    \author{Hubert Farnsworth\thanks{Funded by the Overleaf team.}}
+    \date{August 2022}
+    \begin{document}
+    \maketitle
+    We have now added a title, author and date to our first \LaTeX\{} 
+    document!
+
+    % This line here is a comment. It will not be typeset in 
+    the document.
+    \end{document}
+\end{verbatim}
+\end{tcolorbox}
+
+This example produces output that is identical to the previous LaTeX code which did not contain the comment.
